@@ -27,12 +27,12 @@ implements View.OnClickListener{
         // 選択肢を表すキーワードを文字列定義リソースから取得
         String keyword = getResources().getString(R.string.usersOption);
         // 選択された文字列をキーワードを元に取得
-        String selectWord = preIntent.getStringExtra(keyword);
+        String usersWord = preIntent.getStringExtra(keyword);
         // 正解を文字列定義リソースから取得
         String correctWord = getResources().getString(R.string.usagi);
 
         // テキストビューの表示はデフォルトは不正解にしてあるので、正解時に表示を変更
-        if (selectWord.equals(correctWord)) {
+        if (usersWord.equals(correctWord)) {
             String str = getResources().getString(R.string.seikaiMsg);
             TextView textView = (TextView) findViewById(R.id.tvAnsMsg);
             textView.setText(str);
