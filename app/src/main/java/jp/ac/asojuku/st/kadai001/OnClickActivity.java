@@ -1,9 +1,6 @@
 package jp.ac.asojuku.st.kadai001;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.provider.Settings;
-import android.support.annotation.XmlRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +33,6 @@ implements View.OnClickListener{
 
         // テキストビューの表示はデフォルトは不正解にしてあるので、正解時に表示を変更
         if (selectWord.equals(correctWord)) {
-            Resources res = getResources();
             String str = getResources().getString(R.string.seikaiMsg);
             TextView textView = (TextView) findViewById(R.id.tvAnsMsg);
             textView.setText(str);
